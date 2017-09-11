@@ -1,0 +1,40 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Irishka\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'build' ]
+2 info using npm@5.0.3
+3 info using node@v6.9.5
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info lifecycle angularjs-boilerplate@1.3.0~prebuild: angularjs-boilerplate@1.3.0
+6 silly lifecycle angularjs-boilerplate@1.3.0~prebuild: no script for prebuild, continuing
+7 info lifecycle angularjs-boilerplate@1.3.0~build: angularjs-boilerplate@1.3.0
+8 verbose lifecycle angularjs-boilerplate@1.3.0~build: unsafe-perm in lifecycle true
+9 verbose lifecycle angularjs-boilerplate@1.3.0~build: PATH: C:\Users\Irishka\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;F:\STUDY\STUDY_WEB\Angular\AngularJS-Boilerplate\node_modules\.bin;C:\Users\Irishka\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Irishka\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\dotnet;C:\Program Files (x86)\Skype\Phone;C:\Users\Irishka\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+10 verbose lifecycle angularjs-boilerplate@1.3.0~build: CWD: F:\STUDY\STUDY_WEB\Angular\AngularJS-Boilerplate
+11 silly lifecycle angularjs-boilerplate@1.3.0~build: Args: [ '/d /s /c', 'gulp build' ]
+12 silly lifecycle angularjs-boilerplate@1.3.0~build: Returned: code: 1  signal: null
+13 info lifecycle angularjs-boilerplate@1.3.0~build: Failed to exec build script
+14 verbose stack Error: angularjs-boilerplate@1.3.0 build: `gulp build`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Irishka\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:283:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Irishka\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+15 verbose pkgid angularjs-boilerplate@1.3.0
+16 verbose cwd F:\STUDY\STUDY_WEB\Angular\AngularJS-Boilerplate
+17 verbose Windows_NT 6.1.7601
+18 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Irishka\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "build"
+19 verbose node v6.9.5
+20 verbose npm  v5.0.3
+21 error code ELIFECYCLE
+22 error errno 1
+23 error angularjs-boilerplate@1.3.0 build: `gulp build`
+23 error Exit status 1
+24 error Failed at the angularjs-boilerplate@1.3.0 build script.
+24 error This is probably not a problem with npm. There is likely additional logging output above.
+25 verbose exit [ 1, true ]

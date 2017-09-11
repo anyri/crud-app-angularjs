@@ -1,0 +1,27 @@
+<div ng-if="notesCtrl.pending" class="centered">
+    <img src="images/ajax-loader.gif"></div>
+<h3 class="error-msg">{{notesCtrl.uploadError}}</h3>
+
+<div class="container cf" ng-class="{'active-load' : notesCtrl.pending}" ng-if="!notesCtrl.uploadError">
+    <h2>{{notesCtrl.title}} <button id="create_note" class="btn btn-default pull-right" ui-sref="new({id: 'new'})">Create Note</button></h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th ng-click="notesCtrl.sort('createdAt')" ng-class="{'click' : !notesCtrl.pending, 'updown-arrow' : notesCtrl.countSortDate == 1, 'up-arrow' : notesCtrl.countSortDate == 2, 'down-arrow' : notesCtrl.countSortDate == 3 }">Created</th>
+                <th ng-click="notesCtrl.sort('updatedAt')" ng-class="{'click' : !notesCtrl.pending, 'updown-arrow' : notesCtrl.countSortUpDate == 1, 'up-arrow' : notesCtrl.countSortUpDate == 2, 'down-arrow' : notesCtrl.countSortUpDate == 3 }">Updated</th>
+                <th ng-click="notesCtrl.sort('name')" ng-class="{'click' : !notesCtrl.pending, 'updown-arrow' : notesCtrl.countSortName == 1, 'up-arrow' : notesCtrl.countSortName == 2, 'down-arrow' : notesCtrl.countSortName == 3 }">Name</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in notesCtrl.notes" ng-class="{'active-remove': item.pending}"><!-- | orderBy : notesCtrl.sortType-->
+                <td><span my-date="{{item.createdAt}}"></span></td>
+                <td><span my-date="{{item.updatedAt}}"></span></td>
+                <td><a ui-sref="note({noteID: item.id})">{{item.name}}</a></td>
+                <td>{{item.description}}</td>
+                <td><span ui-sref="edit({id: item.id})" class="glyphicon glyphicon-edit click"></span><span class="glyphicon glyphicon-remove-circle" ng-click="notesCtrl.removeNote(item)" ng-class="{'click' : !item.pending && !notesCtrl.pending}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

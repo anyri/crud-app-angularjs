@@ -1,0 +1,57 @@
+
+@font-face {
+font-family: ‘Glyphicons Halflings’;
+src: font-url(‘../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot’);
+src: font-url(‘../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix’) format(’embedded-opentype’),
+font-url(‘../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff’) format(‘woff’),
+font-url(‘../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf’) format(‘truetype’),
+font-url(‘../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular’) format(‘svg’);
+}
+
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
+.error-msg {
+  color: red;
+}
+.click {
+  cursor: pointer;
+}
+.active-remove, .click:hover, .active-load {
+  opacity: 0.5;
+}
+.updown-arrow:after {
+  content: "\21C5";
+  color: #0040ff;
+  margin-left: 7px;
+}
+.up-arrow:after {
+  content: "\21C8";
+  color: #0040ff;
+  margin-left: 7px;
+}
+.down-arrow:after {
+  content: "\21CA";
+  color: #0040ff;
+  margin-left: 7px;
+}
+.alerts {
+  position: fixed;
+  top: 20px;
+  right: 1%;
+  white-space: nowrap;
+}
+.glyphicon {
+  color: #b5becb;
+  font-size: 25px;
+  display: inline;
+  margin-right: 10px;
+}
+.glyphicon.glyphicon-calendar {
+  font-size: 25px;
+}
+input, textarea {
+  background-color: white !important;
+}

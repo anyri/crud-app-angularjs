@@ -1,0 +1,10 @@
+<h2>{{noteCtrl.note.name}}</h2>
+<div ng-if="noteCtrl.pending" class="centered"><img src="images/ajax-loader.gif"></div>
+
+<h3 class="error-msg">{{noteCtrl.errorMessage}}</h3>
+
+<div class="container cf" ng-if="!noteCtrl.pending && !noteCtrl.errorMessage">
+    <span my-date="{{noteCtrl.note.createdAt}}">Created:</span>
+    <!--{{ noteCtrl.note.createdAt | date :  "M/d/yy" }}-->
+    <p>{{ noteCtrl.note.description}}</p>
+</div>

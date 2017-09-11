@@ -1,0 +1,40 @@
+<div ng-if="formCtrl.pending" class="centered">
+    <img src="images/ajax-loader.gif"></div>
+</div>
+<h2 class="error" ng-if="formCtrl.errorMessage">formCtrl.errorMessage</h2>
+
+<div ng-class="{'active-load' : formCtrl.pending}">
+    <h2>Edit {{formCtrl.note.name}}</h2>
+
+    <form name="edit-note-form" ng-submit="!formCtrl.pending && formCtrl.save()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="{{formCtrl.note.name}}" ng-model="formCtrl.note.name" ng-readonly="formCtrl.pending" required>
+        </div>
+        <div class="form-group">
+            <label for="createdAt">Created:</label>
+             <input ng-click="formCtrl.openDatepicker()" type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="formCtrl.note.createdAt" is-open="formCtrl.opened" datepicker-options="options" required close-text="Close" ng-pattern="/^\d{2}\/d{2}\/d{4}$/" max-date="formCtrl.maxDate"/>
+             <!--<input ng-click="formCtrl.openDatepicker()" type="text" class="form-control" uib-datepicker-popup ng-model="formCtrl.note.createdAt" is-open="formCtrl.opened" datepicker-options="options" required close-text="Close"/>-->
+        </div>        
+        <div class="form-group" ng-if="formCtrl.note.updatedAt">
+            <label for="updtedAt">Updated: <span my-date="{{formCtrl.note.updatedAt}}"></span></label>
+             <!--<i class="glyphicon glyphicon-calendar"></i>-->
+        </div>        
+        <div class="form-group">
+            <label for="desc">Description:</label>
+            <textarea id="desc" ng-model="formCtrl.note.description" ng-readonly="formCtrl.pending" required>
+                {{formCtrl.note.description}}
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="text">Text:</label>
+            <textarea id="text" ng-model="formCtrl.note.text" ng-readonly="formCtrl.pending" required>
+                {{formCtrl.note.text}}
+            </textarea>
+        </div>
+
+        <button type="button" ng-click="formCtrl.reset($event)" class="btn btn-default">Reset</button>
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+    
+</div>
